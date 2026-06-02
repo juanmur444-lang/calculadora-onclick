@@ -1,0 +1,191 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Verdana, sans-serif;
+}
+
+body{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+overflow:hidden;
+}
+
+/* fondo de la pagina */
+.fondo{
+
+
+position:fixed;
+inset:0;
+
+background:
+linear-gradient(
+    rgba(10,15,25,.75),
+    rgba(10,15,25,.75)
+),
+url("img/fondo2.jpg.jpg") no-repeat;
+
+background-size:cover;
+background-position:center;
+
+z-index:-2;
+
+
+}
+
+/* calculadora */
+.container{
+
+
+width:430px;
+max-width:95%;
+
+padding:22px;
+
+border-radius:20px;
+
+background:rgba(158, 74, 74, 0.08);
+
+backdrop-filter:blur(14px);
+
+border:1px solid rgba(29, 77, 117, 0.4);
+
+box-shadow:
+0 0 20px rgba(33,150,243,.35),
+0 0 40px rgba(33,150,243,.20),
+0 10px 30px rgba(0,0,0,.4);
+
+transition:all .3s ease;
+
+
+}
+
+/* efecto cuando paso el mouse */
+.container:hover{
+
+
+box-shadow:
+0 0 25px rgba(33,150,243,.45),
+0 0 50px rgba(33,150,243,.25),
+0 10px 30px rgba(0,0,0,.4);
+
+
+}
+
+/* pantalla */
+.display{
+
+
+margin-bottom:20px;
+
+
+}
+
+#resultado{
+
+
+width:100%;
+height:75px;
+
+border:none;
+
+border-radius:15px;
+
+padding:15px;
+
+font-size:2rem;
+
+text-align:right;
+
+background:rgba(255,255,255,.12);
+
+color:rgb(255, 255, 255);
+
+outline:none;
+
+
+}
+
+/* zona de botones */
+.botones{
+
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:12px;
+
+
+}
+
+/* botones generales */
+button{
+
+
+border:none;
+
+padding:18px;
+
+border-radius:14px;
+
+cursor:pointer;
+
+font-size:1.2rem;
+
+transition:all .2s ease;
+
+
+}
+
+/* numeros */
+.numero{
+
+
+background:#2f3744;
+
+color:white;
+
+
+}
+
+/* operadores */
+.operador{
+
+
+background:#1976d2;
+
+color:rgb(255, 255, 255);
+
+
+}
+
+/* hover de botones */
+button:hover{
+
+
+transform:translateY(-3px);
+
+box-shadow:0 0 12px rgba(255,255,255,.2);
+
+
+}
+
+/* cuando se presiona */
+button:active{
+
+transform:scale(.95);
+
+
+}
+
+/* boton cero */
+.cero{
+
+
+grid-column:span 2;
+
+
+}
